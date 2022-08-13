@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+#background {
+
+    position: relative; 
+    
+}
+
+#background::after {
+    content: "";
+    background-image: url("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/6/10/1307719929081/The-Smiths-009.jpg?width=700&quality=85&auto=format&fit=max&s=4cd08e7e3e0aca5c7d2954601acf4a8d");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+  }
+.container-main {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.container-main> img{
+    box-shadow: 15 6px 9px 0 rgba(0,0,0,0.2);
+}
+
+.main-title{
+   flex-direction: column;
+}
+
+.nav-div{
+    
+    justify-content: center;
+    position: relative;
+    
+}
+#main-nav{
+    display: flex;
+    flex-direction: row;
+    /* width: 30%; */
+   padding: 35px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    background-color: #e5e5e5;
+  
+    
+    
+}
+#booking{
+    justify-content: center;
+    
+}
+
+
+.shows-container {
+    display: flex;
+    justify-content: center;
+    display: grid;
+}
+
+.shows-container> button{
+    border-radius: 50%;
+    justify-content: center;
+
+    
+}
+.img-show{
+    width:250px;
+    height: 150px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 15 6px 9px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    padding: 2px 65px;
+    border: 1px solid black;
+    border-radius: 1%;
+    background-color: #e5e5e5;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  #footer{
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background-color:#252422;
+    width: 100%;
+    height: 50px;
+    margin-top: -50px;
+    color: whitesmoke;
+    
+   }
+   #footer>p{
+    justify-content: center;
+}
+
+.socialmediaicons{
+    
+    height:25px;
+    width: 25px;
+    justify-content: center;
+   
+
+}
