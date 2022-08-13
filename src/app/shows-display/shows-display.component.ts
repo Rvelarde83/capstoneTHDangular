@@ -21,7 +21,7 @@ export class ShowsDisplayComponent implements OnInit {
 
   selectShow(show) {
     this.showService.selectedShow = show;
-    this.router.navigate(['/edit']);
+    this.router.navigate(['shows/edit']);
   }
 }
 

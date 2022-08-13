@@ -7,7 +7,7 @@
 #background::after {
     content: "";
     background-image: url("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/6/10/1307719929081/The-Smiths-009.jpg?width=700&quality=85&auto=format&fit=max&s=4cd08e7e3e0aca5c7d2954601acf4a8d");
-    opacity: 0.5;
+    opacity: 0.2;
     top: 0;
     left: 0;
     bottom: 0;
@@ -33,6 +33,18 @@ html, body {
 
 .main-title{
    flex-direction: column;
+  
+}
+.main-site{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.main-site> iframe{
+    margin: 5px;
 }
 
 .nav-div{
@@ -116,3 +128,11 @@ html, body {
    
 
 }
+
+.image-mosaic {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+  }
+  

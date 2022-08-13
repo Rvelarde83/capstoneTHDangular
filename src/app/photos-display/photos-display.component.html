@@ -1,0 +1,18 @@
+
+    <a routerLink="/photos/create">
+        <button>Add photo</button>
+    </a>
+    <div class="image-mosaic">
+    
+    <ul style="list-style: none;">
+      <li *ngFor="let photo of photosService.photo; index as i;">
+        <div class="card">
+        <h1 (click)="selectPhoto(photo)">{{photo.title}}</h1>
+       
+        <img src="{{photo.image}}" class="img-photo"/> 
+    
+        <button (click)="photosService.deletePhoto(photo)">Delete</button>
+      </div>
+        </li>
+      </ul>
+  </div>

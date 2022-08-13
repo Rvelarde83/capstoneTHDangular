@@ -1,0 +1,11 @@
+<p>form-photos works!</p>
+
+<div class="container-main" >
+
+    <form (ngSubmit)="handleSubmit()" name="form" class="photo-forms">
+      <input type="text" name="title" [(ngModel)]="title" placeholder="Title of picture:"><br>
+      <input type="text" name="image" [(ngModel)]="image"   placeholder="Image link:"><br>
+     
+      <input type="submit">
+    </form>
+  </div>
