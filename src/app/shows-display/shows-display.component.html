@@ -1,0 +1,16 @@
+<p>main-site works!</p>
+<a routerLink="/create">
+    <button>CREATE Show</button>
+  </a>
+  
+  <ul>
+    <li *ngFor="let show of showService.shows; index as i;">
+      <h1 (click)="selectShow(show)">{{show.name}}</h1>
+      <h2>{{show.price}}</h2>
+      <img src="{{show.image}}"/> 
+      <h2>{{show.location}}</h2>
+      <h2>{{show.timedate}}</h2>
+      <h2>{{show.message}}</h2>
+      <button (click)="showService.deleteShow(show)">Delete</button>
+    </li>
+  </ul>
