@@ -39,8 +39,9 @@ export class FormPhotosComponent implements OnInit {
       this.photosService.createPhoto(photo)
       this.title = ""
       this.image = ""
+      console.log(this.action)
 
-      this.router.navigate(["/photos"])
+      this.router.navigate([""])
     }
 
     if (this.action === "photos/edit") {
@@ -49,7 +50,7 @@ export class FormPhotosComponent implements OnInit {
       this.title = ""
       this.image = ""
 
-      this.router.navigate(["photos"])
+      this.router.navigate(["/"])
     }
   }
 
