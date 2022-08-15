@@ -1,0 +1,22 @@
+<h2> Band Members</h2>
+<a routerLink="/bandmates/create">
+  <button>Add Bandmate</button>
+</a>
+<div class="image-mosaic">
+
+    <ul style="list-style: none;">
+      <li *ngFor="let bandmate of bandmatesService.bandmate; index as i;">
+        <div class="card">
+        <h1 (click)="selectedBandmate(bandmate)">{{bandmate.name}}</h1>
+        
+        <img src="{{bandmate.image}}" class="img-photo"/> 
+        <h2 >{{bandmate.instrument}}</h2>
+        <h2 >{{bandmate.notes}}</h2>
+    
+        <button (click)="bandmatesService.deleteBandmate(bandmate)">Delete</button>
+      </div>
+        </li>
+      </ul>
+    </div>
+    
+  

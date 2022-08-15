@@ -22,6 +22,7 @@ export class FormPhotosComponent implements OnInit {
     this.router = router
     this.action = this.router.url
     this.photosService = photosService
+    console.log(this.action)
     
     if (this.action === "/photos/edit") {
       this.title = this.photosService.selectedPhoto.name
@@ -31,9 +32,9 @@ export class FormPhotosComponent implements OnInit {
     }
   }
   
-  handleSubmit2() {
+  handleSubmit() {
     
-    const photo: any = { name: this.title, image: this.image,  }
+    const photo: any = { title: this.title, image: this.image,  }
     
     if (this.action === "/photos/create") {
       this.photosService.createPhoto(photo)

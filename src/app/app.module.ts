@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { PhotosDisplayComponent } from './photos-display/photos-display.component';
 import { FormPhotosComponent } from './form-photos/form-photos.component';
 import { FormBandmatesComponent } from './form-bandmates/form-bandmates.component';
+import { LoginComponent } from './login/login.component';
+import { AUTH_PROVIDERS } from './auth.service';
+import { LoggedInGuard } from './logged-in.guard';
+import { BandmatesDisplayComponent } from './bandmates-display/bandmates-display.component';
     
 @NgModule({
   declarations: [
@@ -19,14 +23,19 @@ import { FormBandmatesComponent } from './form-bandmates/form-bandmates.componen
     FormShowsComponent,
     PhotosDisplayComponent,
     FormPhotosComponent,
-    FormBandmatesComponent
+    FormBandmatesComponent,
+    LoginComponent,
+    BandmatesDisplayComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [ AUTH_PROVIDERS,
+    LoggedInGuard],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

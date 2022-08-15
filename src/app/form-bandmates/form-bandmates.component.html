@@ -1,1 +1,12 @@
-<p>form-bandmates works!</p>
+
+<div class="container-main" >
+
+    <form (ngSubmit)="handleSubmit()" name="form" class="bandmates-forms">
+      <input type="text" name="name" [(ngModel)]="name" placeholder="Name band member:"><br>
+      <input type="text" name="image" [(ngModel)]="image"   placeholder="Image link:"><br>
+      <input type="text" name="instrument" [(ngModel)]="instrument"  placeholder="instrument"><br>
+      <input type="text" name="notes" [(ngModel)]="notes"  placeholder="Notes:"><br>
+    
+      <input type="submit">
+    </form>
+  </div>
