@@ -27,7 +27,7 @@ export class FormShowsComponent implements OnInit {
     this.action = this.router.url
     this.showService = showService
 
-    if (this.action === "/edit"){
+    if (this.action === "/shows/edit"){
       this.name = this.showService.selectedShow.name
       this.image = this.showService.selectedShow.image
       this.flyer = this.showService.selectedShow.flyer
@@ -43,7 +43,7 @@ export class FormShowsComponent implements OnInit {
 
     const show: any = {name: this.name, image: this.image, flyer: this.flyer, price: this.price, location: this.location, timedate: this.timedate, message: this.message, }
 
-    if (this.action === "/create"){
+    if (this.action === "/shows/create"){
       this.showService.createShow(show)
       this.name = ""
       this.image = ""
@@ -52,10 +52,10 @@ export class FormShowsComponent implements OnInit {
       this.location = ""
       this.timedate = ""
       this.message = ""
-      this.router.navigate(["/"])
+      this.router.navigate(["/shows"])
     }
 
-    if (this.action === "/edit"){
+    if (this.action === "/shows/edit"){
       show._id = this.id
       this.showService.updateShow(show)
       this.name = ""
@@ -65,7 +65,7 @@ export class FormShowsComponent implements OnInit {
       this.location = ""
       this.timedate = ""
       this.message = ""
-      this.router.navigate(["/"])
+      this.router.navigate(["/shows"])
     }
   }
 

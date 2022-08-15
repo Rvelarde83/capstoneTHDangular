@@ -22,35 +22,36 @@ export class FormPhotosComponent implements OnInit {
     this.router = router
     this.action = this.router.url
     this.photosService = photosService
-
-    if (this.action === "photos/edit") {
+    
+    if (this.action === "/photos/edit") {
       this.title = this.photosService.selectedPhoto.name
       this.image = this.photosService.selectedPhoto.image
       
       this.id = this.photosService.selectedPhoto._id
     }
   }
-
-  handleSubmit() {
-
+  
+  handleSubmit2() {
+    
     const photo: any = { name: this.title, image: this.image,  }
-
-    if (this.action === "photos/create") {
+    
+    if (this.action === "/photos/create") {
       this.photosService.createPhoto(photo)
       this.title = ""
       this.image = ""
       console.log(this.action)
+    
 
-      this.router.navigate([""])
+      this.router.navigate(["/photos"])
     }
 
-    if (this.action === "photos/edit") {
+    if (this.action === "/photos/edit") {
       photo._id = this.id
       this.photosService.updatePhoto(photo)
       this.title = ""
       this.image = ""
 
-      this.router.navigate(["/"])
+      this.router.navigate(["/photos"])
     }
   }
 
