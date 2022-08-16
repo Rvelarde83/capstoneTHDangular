@@ -19,8 +19,12 @@ export class PhotosDisplayComponent implements OnInit {
     this.photosService.getPhoto();
   }
 
-  selectPhoto(photo) {
+  selectedPhoto(photo) {
     this.photosService.selectedPhoto = photo;
     this.router.navigate(['photos/edit']);
   }
+  showPhoto(photo) {
+    this.photosService.selectedPhoto = photo;
+    this.router.navigate([`photos/${photo._id}`]);
+}
 }

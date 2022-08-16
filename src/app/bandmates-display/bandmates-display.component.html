@@ -7,15 +7,17 @@
     <ul style="list-style: none;">
       <li *ngFor="let bandmate of bandmatesService.bandmate; index as i;">
         <div class="card">
-        <h1 (click)="selectedBandmate(bandmate)">{{bandmate.name}}</h1>
-        
-        <img src="{{bandmate.image}}" class="img-photo"/> 
+        <h1 (click)="selectedBandmate(bandmate)" style= "cursor: pointer">{{bandmate.name}}</h1>
+        <a (click)="showBandmate(bandmate)" style= "cursor: pointer">
+        <img  src="{{bandmate.image}}" class="img-display"/> 
+      </a>
         <h2 >{{bandmate.instrument}}</h2>
-        <h2 >{{bandmate.notes}}</h2>
+        <h2 >{{bandmate.notes}} </h2>
     
         <button (click)="bandmatesService.deleteBandmate(bandmate)">Delete</button>
       </div>
         </li>
+        <div class="space"></div>
       </ul>
     </div>
     

@@ -10,17 +10,26 @@ import { PhotosDisplayComponent } from './photos-display/photos-display.componen
 import { LoginComponent } from './login/login.component';
 import { AUTH_PROVIDERS } from './auth.service';
 import { LoggedInGuard } from './logged-in.guard';
+import { ShowShowsComponent } from './show-shows/show-shows.component';
+import { ShowBandmatesComponent } from './show-bandmates/show-bandmates.component';
+import { ShowPhotosComponent } from './show-photos/show-photos.component';
+
+
+
 const routes: Routes = [
   {path: "", component: MainSiteComponent},
   {path: "shows", component: ShowsDisplayComponent},
   {path: "shows/create", component: FormShowsComponent,  canActivate: [ LoggedInGuard ]},
-  {path: "shows/edit", component: FormShowsComponent,  canActivate: [ LoggedInGuard ]},
+  {path: "shows/edit", component: FormShowsComponent, },
+  {path: "shows/:id", component: ShowShowsComponent, },
   {path: "photos", component: PhotosDisplayComponent},
-  {path: "photos/create", component: FormPhotosComponent,  canActivate: [ LoggedInGuard ]},
-  {path: "photos/edit", component: FormPhotosComponent,  canActivate: [ LoggedInGuard ]},
+  {path: "photos/edit", component: FormPhotosComponent, },
+  {path: "photos/create", component: FormPhotosComponent,  },
+  {path: "photos/:id", component: ShowPhotosComponent},
   {path: "bandmates", component: BandmatesDisplayComponent},
   {path: "bandmates/edit", component: FormBandmatesComponent,  canActivate: [ LoggedInGuard ]},
   {path: "bandmates/create", component: FormBandmatesComponent,  canActivate: [ LoggedInGuard ]},
+  {path: "bandmates/:id", component: ShowBandmatesComponent, },
   {path: 'login', component: LoginComponent },
 ];
 

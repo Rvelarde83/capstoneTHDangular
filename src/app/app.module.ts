@@ -14,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { AUTH_PROVIDERS } from './auth.service';
 import { LoggedInGuard } from './logged-in.guard';
 import { BandmatesDisplayComponent } from './bandmates-display/bandmates-display.component';
+import { ShowShowsComponent } from './show-shows/show-shows.component';
+import { ShowPhotosComponent } from './show-photos/show-photos.component';
+import { ShowBandmatesComponent } from './show-bandmates/show-bandmates.component';
     
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BandmatesDisplayComponent } from './bandmates-display/bandmates-display
     FormPhotosComponent,
     FormBandmatesComponent,
     LoginComponent,
-    BandmatesDisplayComponent
+    BandmatesDisplayComponent,
+    ShowShowsComponent,
+    ShowPhotosComponent,
+    ShowBandmatesComponent
   ],
   imports: [
     BrowserModule,

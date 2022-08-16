@@ -23,4 +23,8 @@ export class BandmatesDisplayComponent implements OnInit {
     this.bandmatesService.selectedBandmate = bandmate;
     this.router.navigate(['bandmates/edit']);
   }
+    showBandmate(bandmate) {
+      this.bandmatesService.selectedBandmate = bandmate;
+      this.router.navigate([`bandmates/${bandmate._id}`]);
+  }
 }

@@ -1,5 +1,5 @@
 <div class="shows-container">
-  
+
   <a routerLink="/shows/create">
     <button>CREATE Show</button>
   </a>
@@ -7,14 +7,17 @@
   <ul style="list-style: none;">
     <li *ngFor="let show of showService.shows; index as i;">
       <div class="card">
-      <h1 (click)="selectShow(show)">{{show.name}}</h1>
-      <h2>{{show.price}}</h2>
-      <img src="{{show.image}}" class="img-show"/> 
-      <h2>{{show.location}}</h2>
-      <h2>{{show.timedate}}</h2>
-      <h2>{{show.message}}</h2>
-      <button (click)="showService.deleteShow(show)">Delete</button>
-    </div>
-      </li>
-    </ul>
+        <h1 (click)="selectShow(show)">{{show.name}}</h1>
+        <h2>{{show.price}}</h2>
+        <a (click)="showShow(show)" style= "cursor: pointer">
+          <img src="{{show.image}}" class="img-show" />
+        </a>
+        <h2>{{show.location}}</h2>
+        <h2>{{show.timedate}}</h2>
+        <h2>{{show.message}}</h2>
+        <button (click)="showService.deleteShow(show)">Delete</button>
+      </div>
+    </li>
+    <div class="space"></div>
+  </ul>
 </div>

@@ -13,6 +13,12 @@ export class ShowService {
     const data: any = await response.json()
     this.shows = data
   }
+  async showShow(showShow){
+    await fetch(this.url+`/${showShow._id}`,{
+      method: "get",
+    })
+    this.getShow()
+  }
   
   async createShow(newShow){
     await fetch(this.url,{

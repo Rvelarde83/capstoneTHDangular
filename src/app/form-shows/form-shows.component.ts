@@ -36,6 +36,7 @@ export class FormShowsComponent implements OnInit {
       this.timedate = this.showService.selectedShow.timedate
       this.message = this.showService.selectedShow.message
       this.id = this.showService.selectedShow._id
+      console.log(this.name)
     }
   }
 
