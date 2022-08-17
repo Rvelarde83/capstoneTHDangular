@@ -3,9 +3,9 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { PhotosService } from '../photos.service';
 
 @Component({
-  selector: 'app-form-Photos',
-  templateUrl: './form-Photos.component.html',
-  styleUrls: ['./form-Photos.component.css']
+  selector: 'app-form-photos',
+  templateUrl: './form-photos.component.html',
+  styleUrls: ['./form-photos.component.css']
 })
 export class FormPhotosComponent implements OnInit {
   route: ActivatedRoute;
