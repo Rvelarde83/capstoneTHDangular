@@ -1,12 +1,13 @@
 #background {
 
     position: relative; 
+    background-color:#0e0e0e; 
     
 }
 
 #background::after {
     content: "";
-    background-image: url("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/6/10/1307719929081/The-Smiths-009.jpg?width=700&quality=85&auto=format&fit=max&s=4cd08e7e3e0aca5c7d2954601acf4a8d");
+    /* background-image: url("https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/6/10/1307719929081/The-Smiths-009.jpg?width=700&quality=85&auto=format&fit=max&s=4cd08e7e3e0aca5c7d2954601acf4a8d"); */
     opacity: 0.2;
     top: 0;
     left: 0;
@@ -21,11 +22,11 @@ html, body {
     margin: 0;
     min-height: 100%;
     font-family: 'Bodoni Moda', serif;
-
-    font-weight: 400;
+    color: white;
+    font-weight: 500;
   }
 .container-main {
-    display: flex;
+    display: grid;
     justify-content: center;
     padding-bottom: 50px;
 }
@@ -33,19 +34,40 @@ html, body {
 .container-main> img{
     box-shadow: 15 6px 9px 0 rgba(0,0,0,0.2);
 }
-
 .main-title{
-   flex-direction: column;
-  
+    flex-direction: column;
+    flex: 1;
+    
 }
 .main-site{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    " . videos ."
+    " . videos ."
+    " . videos ."
+    " . videos ."
+    " . booking ."
     
     
 }
-
+.videos{
+    grid-area:videos;
+}
+.booking{
+  grid-area: booking;
+  width: 80%;
+  justify-self: center;
+}
+.booking>h2{
+    font-style: italic;
+    text-align: center;
+}
 .main-site> iframe{
     margin: 5px;
 }
@@ -71,7 +93,9 @@ html, body {
     
 }
 #booking{
+    display : flex;
     justify-content: center;
+    align-items: center;
     
 }
 
@@ -119,12 +143,20 @@ html, body {
     padding: 2px 65px;
     border: 1px solid black;
     border-radius: 1%;
-    background-color: #adb5bd;
+    background-color:  #e5e5e5;
     object-fit: contain;
+    color:#0e0e0e;
     display: grid;
+    font-weight: 700;
     
-    justify-content: center;
+    text-align: center;
     align-items: center;
+  }
+  #butdelshow{
+    
+    justify-items: center;
+    align-self: center;
+    color:black
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -185,9 +217,12 @@ button {    line-height: 50px;
 }
 
     button {
-        color: #FFF;
+        color: rgb(27, 26, 26);
         transition: all 0.5s;
         position: relative;
+        font-family: 'Bodoni Moda', serif;
+        font-weight: 500;
+        font-style: oblique;
         
         align-items: center;
         justify-content: center;
@@ -201,6 +236,7 @@ button {    line-height: 50px;
         height: 100%;
         z-index: 1;
         background-color: rgba(255,255,255,0.1);
+        color: black;
         transition: all 0.3s;
     }
     button:hover::before {

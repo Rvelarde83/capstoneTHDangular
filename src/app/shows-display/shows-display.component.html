@@ -10,12 +10,12 @@
         <h1 (click)="selectShow(show)">{{show.name}}</h1>
         <h2>{{show.price}}</h2>
         <a (click)="showShow(show)" style= "cursor: pointer">
-          <img src="{{show.image}}" class="img-show" />
+          <img src="{{show.image}}"  />
         </a>
         <h2>{{show.location}}</h2>
         <h2>{{show.timedate}}</h2>
         <h2>{{show.message}}</h2>
-        <button (click)="showService.deleteShow(show)">Delete</button>
+        <button id = "butdelshow" (click)="showService.deleteShow(show)">Delete</button>
       </div>
     </li>
     <div class="space"></div>
