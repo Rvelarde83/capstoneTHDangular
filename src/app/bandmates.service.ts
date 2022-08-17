@@ -4,7 +4,7 @@ import { Injectable , OnInit} from '@angular/core';
   providedIn: 'root'
 })
 export class BandmatesService {
-  url: any = "http://localhost:3000/bandmates/"
+  url: any = "https://thesehandsomedevilsbackendrv.herokuapp.com/bandmates/"
   bandmate: any = []
   selectedBandmate: any;
 

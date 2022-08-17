@@ -4,7 +4,7 @@ import { Injectable , OnInit} from '@angular/core';
   providedIn: 'root'
 })
 export class PhotosService {
-  url: any = "http://localhost:3000/photos/"
+  url: any = "https://thesehandsomedevilsbackendrv.herokuapp.com/photos/"
   photo: any = []
   selectedPhoto: any;
 

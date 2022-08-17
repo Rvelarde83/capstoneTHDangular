@@ -4,7 +4,7 @@ import { Injectable , OnInit} from '@angular/core';
   providedIn: 'root'
 })
 export class ShowService {
-  url: any = "http://localhost:3000/shows/"
+  url: any = "https://thesehandsomedevilsbackendrv.herokuapp.com/shows/"
   shows: any = []
   selectedShow: any;
 
