@@ -2,6 +2,10 @@
 
 - This is a simple website for a tribute band in Los Angeles that I'm a part of.
 
+## URLs
+- https://62fdac0aa3bda147129bb1fc--starlit-nougat-cd25d0.netlify.app/shows
+- FrontEnd Repo: https://github.com/Rvelarde83/capstoneTHDangular/tree/master
+- Backend Repo: https://github.com/Rvelarde83/backendTHDsite
 ## Technologies: 
 
 - Angular, TypeScript
@@ -37,3 +41,4 @@ The site features full crud in the next Models:
 - Add Auth
 - Improve Styling, add animation at the beginning and more features.
 - Add maps for location of Gigs, and email forms to reach out.
+- Making it Responsive
