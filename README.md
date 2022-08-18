@@ -41,3 +41,4 @@ The site features full crud in the next Models:
 - Add Auth
 - Improve Styling, add animation at the beginning and more features.
 - Add maps for location of Gigs, and email forms to reach out.
+- Making it Responsive
