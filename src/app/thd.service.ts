@@ -4,7 +4,7 @@ import { Injectable , OnInit} from '@angular/core';
   providedIn: 'root'
 })
 export class ShowService {
-  url: any = "http://localhost:3000/shows/"
+  url: any = "https://thesehandsomedevilsbackendrv.herokuapp.com/shows/"
   shows: any = []
   selectedShow: any;
 
@@ -12,6 +12,12 @@ export class ShowService {
     const response: any = await fetch(this.url)
     const data: any = await response.json()
     this.shows = data
+  }
+  async showShow(showShow){
+    await fetch(this.url+`/${showShow._id}`,{
+      method: "get",
+    })
+    this.getShow()
   }
   
   async createShow(newShow){

@@ -1,27 +1,39 @@
-# AngularTHDsite
+# These Handsome Devils Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+- This is a simple website for a tribute band in Los Angeles that I'm a part of.
 
-## Development server
+## Technologies: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular, TypeScript
+- Express, MongoDb, Mongoose, Html, Plain CSS, Heroku.
 
-## Code scaffolding
+### The Reason
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- The reason to build this webiste was to challenge myself to try to learn Angular, which I liked, and to challenge myself to learn CSS which I've struggled with.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## The Site 
 
-## Running unit tests
+The site features full crud in the next Models:
+- Shows
+- Bandmates
+- Photos 
+- The idea is that the site gets to be almost self mantainable so other bandmembers with a user and a password can edit it.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+#### Images
+-**Home**
+![Home](https://i.imgur.com/pfC0RVE.png)
+-**Shows**
+![Home](https://i.imgur.com/wUyvcsY.png)
+-**Bandmembers**
+![Home](https://i.imgur.com/SCWAy5i.png)
+-**Photos**
+![Home](https://i.imgur.com/ha0xpOk.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Future Enhancements:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Add Auth
+- Improve Styling, add animation at the beginning and more features.
+- Add maps for location of Gigs, and email forms to reach out.
