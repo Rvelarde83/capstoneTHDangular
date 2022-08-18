@@ -2,3 +2,8 @@
 [[redirects]]
   from = "/*"
   to = "/"
+
+[build]
+base="/"
+command= "npm run build"
+publish= "dist" 
