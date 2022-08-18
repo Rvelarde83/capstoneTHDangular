@@ -2,13 +2,13 @@
 <div class="container-main" >
 
   <form (ngSubmit)="handleSubmit()" name="form" class="shows-forms">
-    <input type="text" name="name" [(ngModel)]="name" placeholder="Name of show:"><br>
-    <input type="text" name="image" [(ngModel)]="image"   placeholder="Image link:"><br>
-    <input type="text" name="flyer" [(ngModel)]="flyer"  placeholder="Flyer link:"><br>
-    <input type="text" name="price" [(ngModel)]="price"  placeholder="Price of ticket:"><br>
-    <input type="text" name="location" [(ngModel)]="location"  placeholder="Location of venue:"><br>
-    <input type="text" name="timedate" [(ngModel)]="timedate"  placeholder="Time and date of show:"><br>
-    <input type="text" name="message" [(ngModel)]="message" placeholder="Message"><br>
+    Name: <input type="text" name="name" [(ngModel)]="name" placeholder="Name of show:"><br>
+    Image: <input type="text" name="image" [(ngModel)]="image"   placeholder="Image link:"><br>
+    Flyer: <input type="text" name="flyer" [(ngModel)]="flyer"  placeholder="Flyer link:"><br>
+    Price: <input type="text" name="price" [(ngModel)]="price"  placeholder="Price of ticket:"><br>
+    Location: <input type="text" name="location" [(ngModel)]="location"  placeholder="Location of venue:"><br>
+    Time and Date: <input type="text" name="timedate" [(ngModel)]="timedate"  placeholder="Time and date of show:"><br>
+    Notes: <input type="text" name="message" [(ngModel)]="message" placeholder="Message"><br>
     <input type="submit">
   </form>
 </div>

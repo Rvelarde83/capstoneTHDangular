@@ -1,5 +1,5 @@
 <div class="shows-container">
-  <h2> Band Members</h2>
+  <h1 class=""> Band Members</h1>
 
   <a routerLink="/bandmates/create">
     <button>Add Bandmate</button>
@@ -8,7 +8,7 @@
     
     <ul style="list-style: none;">
       <li *ngFor="let bandmate of bandmatesService.bandmate; index as i;">
-        <div class="card">
+        <div >
           <h1 (click)="selectedBandmate(bandmate)" style= "cursor: pointer">{{bandmate.name}}</h1>
           <a (click)="showBandmate(bandmate)" style= "cursor: pointer">
             <img  src="{{bandmate.image}}" class="img-display"/> 

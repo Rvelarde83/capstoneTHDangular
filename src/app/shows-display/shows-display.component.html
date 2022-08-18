@@ -6,7 +6,7 @@
   <h2> Click on title to edit!</h2>
   <ul style="list-style: none;">
     <li *ngFor="let show of showService.shows; index as i;">
-      <div class="card">
+      <div >
         <h1 (click)="selectShow(show)">{{show.name}}</h1>
         <h2>{{show.price}}</h2>
         <a (click)="showShow(show)" style= "cursor: pointer">

@@ -7,7 +7,7 @@
     
     <ul style="list-style: none;">
       <li *ngFor="let photo of photosService.photo; index as i;">
-        <div class="card">
+        <div >
         <h1 (click)="selectedPhoto(photo)" style= "cursor: pointer">{{photo.title}}</h1><br>
         
         <div class="card-center">
